@@ -21,7 +21,13 @@ class ViewController: UIViewController {
     }
 
     @IBAction func buttonTapped() {
-        helloLabel.isHidden = false
+        if helloLabel.isHidden {
+            helloLabel.isHidden = false
+            startButton.setTitle("Clear", for: .normal)
+        } else {
+            helloLabel.isHidden = true
+            startButton.setTitle("Show text", for: .normal)
+        }
     }
     
 }
